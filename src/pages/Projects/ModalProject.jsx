@@ -26,7 +26,7 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
             const response = await getTableItemByID(id, tableName);
             setData(response || {});
         } catch (error) {
-            console.error("Ошибка загрузки проекта:", error);
+            console.error("Ошибка загрузки проекта:" + error);
             setData({});
         } finally {
             setIsLoading(false);
@@ -47,7 +47,7 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
                         throw new Error((await res.json()).message)
                 }
                 catch (error) {
-                    alert('Ошибка при удалении проекта:', error.message)
+                    alert('Ошибка при удалении проекта:' + error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -74,7 +74,7 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
                         throw new Error((await res.json()).message)
                 }
                 catch (error) {
-                    alert('Ошибка при обновлении проекта:', error.message)
+                    alert('Ошибка при обновлении проекта:' + error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -100,7 +100,7 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
                     throw new Error((await res.json()).message)
             }
             catch (error) {
-                alert('Ошибка при добавлении проекта:', error.message)
+                alert('Ошибка при добавлении проекта:' + error.message)
             }
             finally {
                 setIsLoading(false)

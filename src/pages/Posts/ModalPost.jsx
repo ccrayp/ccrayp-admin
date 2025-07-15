@@ -26,7 +26,7 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
             const response = await getTableItemByID(id, tableName);
             setData(response || {});
         } catch (error) {
-            console.error("Ошибка загрузки записи:", error);
+            console.error("Ошибка загрузки записи:" + error);
             setData({});
         } finally {
             setIsLoading(false);
@@ -40,14 +40,13 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
                 setIsLoading(true)
                 try {
                     const res = await deleteTableItemById(id, tableName)
-                    
-                    if(res.status === 200)
+                    if(res.ok)
                         await handleOnSuccess()
                     else
                         throw new Error((await res.json()).message)
                 }
                 catch (error) {
-                    alert('Ошибка при удалении записи:', error.message)
+                    alert('Ошибка при удалении записи:' + error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -67,14 +66,13 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
                 setIsLoading(true)
                 try {
                     const res = await updateTableItemById(id, new FormData(formRef.current), tableName)
-                    
-                    if(res.status === 200)
+                    if(res.ok)
                         await handleOnSuccess()
                     else
                         throw new Error((await res.json()).message)
                 }
                 catch (error) {
-                    alert('Ошибка при обновлении записи:', error.message)
+                    alert('Ошибка при обновлении записи:' + error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -92,7 +90,7 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
             setIsLoading(true)
             try {
                 const res = await newTableItemByData(new FormData(formRef.current), tableName)
-                if (res.status === 201) {
+                if (res.ok) {
                     await handleOnSuccess()
                     closeModal()
                 }
@@ -100,7 +98,7 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
                     throw new Error((await res.json()).message)
             }
             catch (error) {
-                alert('Ошибка при добавлении записи:', error.message)
+                alert('Ошибка при добавлении записи:' + error.message)
             }
             finally {
                 setIsLoading(false)

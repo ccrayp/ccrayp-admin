@@ -67,9 +67,9 @@ export default function Technologies() {
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => handleShowModal(null)}>Добавить технологию</Dropdown.Item>
                         <Dropdown.Item onClick={() => getData({
-                            setData: setProjects,
+                            setData: setTechnologies,
                             setIsLoading: setIsLoading,
-                            tableName: 'project',
+                            tableName: 'technology',
                             navigate: navigate
                         })}>Обновить данные</Dropdown.Item>
                     </Dropdown.Menu>

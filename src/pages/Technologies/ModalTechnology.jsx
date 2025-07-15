@@ -26,7 +26,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
             const response = await getTableItemByID(id, tableName);
             setData(response || {});
         } catch (error) {
-            console.error("Ошибка загрузки технологии:", error);
+            console.error("Ошибка загрузки технологии:" + error);
             setData({});
         } finally {
             setIsLoading(false);
@@ -47,7 +47,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                         throw new Error((await res.json()).message)
                 }
                 catch (error) {
-                    alert('Ошибка при удалении технологии:', error.message)
+                    alert('Ошибка при удалении технологии:' + error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -74,7 +74,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                         throw new Error((await res.json()).message)
                 }
                 catch (error) {
-                    alert('Ошибка при обновлении технологии:', error.message)
+                    alert('Ошибка при обновлении технологии:' + error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -100,7 +100,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                     throw new Error((await res.json()).message)
             }
             catch (error) {
-                alert('Ошибка при добавлении технологии:', error.message)
+                alert('Ошибка при добавлении технологии:' + error.message)
             }
             finally {
                 setIsLoading(false)

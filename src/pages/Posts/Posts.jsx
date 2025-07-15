@@ -17,7 +17,7 @@ export default function Posts() {
 
     async function handleOnSuccess() {
         getData({
-            setData: setProjects,
+            setData: setPosts,
             setIsLoading: setIsLoading,
             tableName: 'post',
             navigate: navigate
@@ -66,9 +66,9 @@ export default function Posts() {
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => handleShowModal(null)}>Добавить запись</Dropdown.Item>
                         <Dropdown.Item onClick={() => getData({
-                            setData: setProjects,
+                            setData: setPosts,
                             setIsLoading: setIsLoading,
-                            tableName: 'project',
+                            tableName: 'post',
                             navigate: navigate
                         })}>Обновить данные</Dropdown.Item>
                     </Dropdown.Menu>
