@@ -19,7 +19,7 @@ export default function Technologies() {
         getData({
             setData: setTechnologies,
             setIsLoading: setIsLoading,
-            tableName: 'project',
+            tableName: 'technology',
             navigate: navigate
         })
     }
