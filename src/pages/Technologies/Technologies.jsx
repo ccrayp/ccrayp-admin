@@ -17,7 +17,7 @@ export default function Technologies() {
 
     async function handleOnSuccess() {
         getData({
-            setData: setProjects,
+            setData: setTechnologies,
             setIsLoading: setIsLoading,
             tableName: 'project',
             navigate: navigate
