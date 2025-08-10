@@ -157,7 +157,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                                 </InputGroup>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text>Показать</InputGroup.Text>
-                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.group} >
+                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.mode} >
                                         <option value='true'>Да</option>        
                                         <option value='false'>Нет</option>        
                                     </Form.Select>

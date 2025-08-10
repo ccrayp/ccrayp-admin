@@ -166,7 +166,7 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
                                 </InputGroup>
                                 <InputGroup >
                                     <InputGroup.Text>Показать</InputGroup.Text>
-                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.group} >
+                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.mode} >
                                         <option value='true'>Да</option>        
                                         <option value='false'>Нет</option>        
                                     </Form.Select>
