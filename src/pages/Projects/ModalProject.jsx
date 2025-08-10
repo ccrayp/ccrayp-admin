@@ -164,6 +164,13 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
                                     <InputGroup.Text>Ссылка</InputGroup.Text>
                                     <Form.Control name="link" as='textarea' rows={1} defaultValue={data.link} />
                                 </InputGroup>
+                                <InputGroup >
+                                    <InputGroup.Text>Показать</InputGroup.Text>
+                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.group} >
+                                        <option value='true'>Да</option>        
+                                        <option value='false'>Нет</option>        
+                                    </Form.Select>
+                                </InputGroup>
                             </Form>
                         ) : (
                             "Не удалось загрузить данные проекта"
@@ -216,6 +223,13 @@ export default function ModalProject({ id = null, imgPrefix, showModal, handleCl
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text>Ссылка</InputGroup.Text>
                                     <Form.Control name="link" as='textarea' rows={1}/>
+                                </InputGroup>
+                                <InputGroup >
+                                    <InputGroup.Text>Показать</InputGroup.Text>
+                                    <Form.Select name="mode" as='textarea' rows={3} >
+                                        <option value='true'>Да</option>        
+                                        <option value='false'>Нет</option>        
+                                    </Form.Select>
                                 </InputGroup>
                             </Form>
                         )

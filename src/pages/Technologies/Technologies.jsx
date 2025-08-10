@@ -84,6 +84,7 @@ export default function Technologies() {
                                         <th>Название</th>
                                         <th>Группа</th>
                                         <th>Фотография</th>
+                                        <th>Показать</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -97,6 +98,7 @@ export default function Technologies() {
                                                     <Image src={imgPrefix + item.img} alt={item.img} className="mb-3" style={{ maxHeight: '80px', maxWidth: '80px' }} />
                                                 </div>
                                             </td>
+                                            <td>{item.mode ? 'Да' : 'Нет'}</td>
                                         </tr>
                                     ))}
                                 </tbody>

@@ -145,7 +145,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                                 </InputGroup>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text>Группа</InputGroup.Text>
-                                    <Form.Select name="group" as='textarea' rows={3} defaultValue={data.group} >
+                                    <Form.Select name="group" as='textarea' rows={1} defaultValue={data.group} >
                                         <option value='lang_tech'>Языки и технологии</option>
                                         <option value='ide_os'>IDE и ОС</option>        
                                         <option value='fund'>Фунадментальные</option>        
@@ -154,7 +154,14 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text>Фотография</InputGroup.Text>
                                     <Form.Control name="img" as='textarea' rows={1} defaultValue={data.img} />
-                                    </InputGroup>
+                                </InputGroup>
+                                <InputGroup className="mb-3">
+                                    <InputGroup.Text>Показать</InputGroup.Text>
+                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.group} >
+                                        <option value='true'>Да</option>        
+                                        <option value='false'>Нет</option>        
+                                    </Form.Select>
+                                </InputGroup>
                                 <div className="d-flex justify-content-center">
                                     <a href={imgPrefix + data.img} target="blank">
                                         <Image src={imgPrefix + data.img} alt={data.img} className="mb-3" style={{ maxHeight: '300px', maxWidth: '500px' }} />
@@ -199,7 +206,7 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                                 </InputGroup>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text>Группа</InputGroup.Text>
-                                    <Form.Select name="group" as='textarea' rows={3} defaultValue={data.group} >
+                                    <Form.Select name="group" as='textarea' rows={1} >
                                         <option value='lang_tech'>Языки и технологии</option>
                                         <option value='ide_os'>IDE и ОС</option>        
                                         <option value='fund'>Фунадментальные</option>        
@@ -208,6 +215,13 @@ export default function ModalTechnology({ id = null, imgPrefix, showModal, handl
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text>Фотография</InputGroup.Text>
                                     <Form.Control name="img" as='textarea' rows={1} />
+                                </InputGroup>
+                                <InputGroup >
+                                    <InputGroup.Text>Показать</InputGroup.Text>
+                                    <Form.Select name="mode" as='textarea' rows={1} >
+                                        <option value='true'>Да</option>        
+                                        <option value='false'>Нет</option>        
+                                    </Form.Select>
                                 </InputGroup>
                             </Form>
                         )

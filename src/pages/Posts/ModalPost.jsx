@@ -158,9 +158,16 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
                                     <InputGroup.Text>Дата проведения</InputGroup.Text>
                                     <Form.Control name="date" as='textarea' rows={1} defaultValue={data.date} />
                                 </InputGroup>
-                                <InputGroup>
+                                <InputGroup className="mb-3">
                                     <InputGroup.Text><a href={data.link} target="blank" style={{ textDecoration: 'none' }}>Ссылка на мероприятие</a></InputGroup.Text>
                                     <Form.Control name="link" as='textarea' rows={1} defaultValue={data.link} />
+                                </InputGroup>
+                                <InputGroup>
+                                    <InputGroup.Text>Показать</InputGroup.Text>
+                                    <Form.Select name="mode" as='textarea' rows={1} defaultValue={data.group} >
+                                        <option value='true'>Да</option>        
+                                        <option value='false'>Нет</option>        
+                                    </Form.Select>
                                 </InputGroup>
                             </Form>
                         ) : (
@@ -211,9 +218,16 @@ export default function ModalPost({ id = null, imgPrefix, showModal, handleClose
                                     <InputGroup.Text>Дата проведения</InputGroup.Text>
                                     <Form.Control name="date" as='textarea' rows={1} />
                                 </InputGroup>
-                                <InputGroup>
+                                <InputGroup className="mb-3">
                                     <InputGroup.Text>Ссылка на мероприятие</InputGroup.Text>
                                     <Form.Control name="link" as='textarea' rows={1} />
+                                </InputGroup>
+                                <InputGroup >
+                                    <InputGroup.Text>Показать</InputGroup.Text>
+                                    <Form.Select name="mode" as='textarea' rows={1}>
+                                        <option value='true'>Да</option>        
+                                        <option value='false'>Нет</option>        
+                                    </Form.Select>
                                 </InputGroup>
                             </Form>
                         )

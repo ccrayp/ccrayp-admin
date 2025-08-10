@@ -85,6 +85,7 @@ export default function Posts() {
                                         <th>Фотография</th>
                                         <th>Дата проведения</th>
                                         <th>Ссылка на мероприятие</th>
+                                        <th>Показать</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -100,6 +101,7 @@ export default function Posts() {
                                             </td>
                                             <td>{item.date}</td>
                                             <td><a href={item.link}>{item.link}</a></td>
+                                            <td>{item.mode ? 'Да' : 'Нет'}</td>
                                         </tr>
                                     ))}
                                 </tbody>

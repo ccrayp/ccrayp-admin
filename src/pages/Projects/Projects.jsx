@@ -86,6 +86,7 @@ export default function Projects() {
                                         <th>Фотография</th>
                                         <th>Технологии</th>
                                         <th>Ссылка</th>
+                                        <th>Показать</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -101,6 +102,7 @@ export default function Projects() {
                                             </td>
                                             <td>{item.stack}</td>
                                             <td>{item.link}</td>
+                                            <td>{item.mode ? 'Да' : 'Нет'}</td>
                                         </tr>
                                     ))}
                                 </tbody>
