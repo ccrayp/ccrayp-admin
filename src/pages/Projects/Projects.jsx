@@ -101,7 +101,14 @@ export default function Projects() {
                                                 </div>
                                             </td>
                                             <td>{item.stack}</td>
-                                            <td>{item.link}</td>
+                                            <td style={{ 
+                                            whiteSpace: 'nowrap', 
+                                            overflow: 'hidden', 
+                                            textOverflow: 'ellipsis',
+                                            maxWidth: '200px'
+                                            }}>
+                                                <a href={item.link}>{item.link}</a>
+                                            </td>                                            
                                             <td>{item.mode ? 'Да' : 'Нет'}</td>
                                         </tr>
                                     ))}

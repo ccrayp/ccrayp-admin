@@ -100,7 +100,14 @@ export default function Posts() {
                                                 </div>
                                             </td>
                                             <td>{item.date}</td>
-                                            <td><a href={item.link}>{item.link}</a></td>
+                                            <td style={{ 
+                                            whiteSpace: 'nowrap', 
+                                            overflow: 'hidden', 
+                                            textOverflow: 'ellipsis',
+                                            maxWidth: '200px'
+                                            }}>
+                                                <a href={item.link}>{item.link}</a>
+                                            </td>
                                             <td>{item.mode ? 'Да' : 'Нет'}</td>
                                         </tr>
                                     ))}
