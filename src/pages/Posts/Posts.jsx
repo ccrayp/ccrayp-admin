@@ -55,6 +55,7 @@ export default function Posts() {
                         <Button onClick={() => handleShowModal(null)}>Добавить запись</Button>
                     </Col>
                 </Row>
+                <ModalProject showModal={showModal} handleCloseModal={handleCloseModal} handleOnSuccess={handleOnSuccess} id={idToEdit} imgPrefix={imgPrefix} />
             </Container>
         )
     }
